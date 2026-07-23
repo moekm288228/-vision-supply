@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+header {
+  padding: 50px 20px;
+  border-bottom: 1px solid #333;
+}
+
+h1 {
+  color: #d4af37;
+  letter-spacing: 6px;
+  font-size: 42px;
+}
+
+h2 {
+  color: #d4af37;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 18px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+a {
+  color: #d4af37;
+}
+
+footer {
+  padding: 30px;
+  border-top: 1px solid #333;
+  color: #aaa;
+}
