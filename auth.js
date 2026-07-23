@@ -1,5 +1,5 @@
-const OWNER_EMAIL = moekm69@gmail.com
-const OWNER_PASSWORD = moe_km05202008
+const OWNER_EMAIL = 
+const OWNER_PASSWORD = 
 
 function login() {
   let email = document.querySelector(moekm69@gmail.com).value;
