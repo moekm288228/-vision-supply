@@ -1,5 +1,0 @@
-<script>
-if (localStorage.getItem("ownerLoggedIn") !== "true") {
-  window.location.href = "login.html";
-}
-</script>
