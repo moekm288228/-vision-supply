@@ -3,6 +3,8 @@
 <head>
 <title>Vision Supply Login</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body {
   background:#050505;
@@ -28,6 +30,7 @@ button {
   background:#d4af37;
   border:none;
   border-radius:20px;
+  cursor:pointer;
 }
 </style>
 
@@ -37,13 +40,12 @@ button {
 
 <h1>Vision Supply Owner Login</h1>
 
-<input placeholder="Email">
-<br>
+const OWNER_EMAIL = "moekm69@gmail.com";
+const OWNER_PASWORD = "moe_km05202008";
 
-<input placeholder="Password" type="password">
-<br>
+<button onclick="login()">Login</button>
 
-<button>Login</button>
+<script src="auth.js"></script>
 
 </body>
 </html>
