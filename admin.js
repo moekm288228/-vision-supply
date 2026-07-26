@@ -1,6 +1,5 @@
-let products = JSON.parse(localStorage.getItem("products")) || [];
-
-
+import { db } from "./firebase.js";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 function addProduct(){
 
 let product = {
