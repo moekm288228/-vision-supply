@@ -16,10 +16,15 @@ quantity: document.getElementById("quantity").value,
 status: document.getElementById("status").value,
 newDrop: document.getElementById("newDrop").value,
 bestSeller: document.getElementById("bestSeller").value
+};
+
 addDoc(collection(db, "products"), product)
 .then(() => {
   alert("Product Added!");
 })
+.catch((error) => {
+  console.log(error);
+});
 .catch((error) => {
   console.log(error);
 });
