@@ -2,14 +2,13 @@
 <html>
 
 <head>
-<title>Vision Supply Dashboard</title>
+<title>Vision Supply Admin</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style.css">
 
 </head>
-
 
 <body>
 
@@ -33,15 +32,47 @@ if (localStorage.getItem("ownerLoggedIn") !== "true") {
 <input id="name" placeholder="Product Name">
 <br><br>
 
+<input id="brand" placeholder="Brand">
+<br><br>
+
 <input id="price" placeholder="Price">
+<br><br>
+
+<input id="size" placeholder="Size">
+<br><br>
+
+<input id="category" placeholder="Category">
+<br><br>
+
+<textarea id="description" placeholder="Description"></textarea>
+<br><br>
+
+<input id="notes" placeholder="Fragrance Notes">
 <br><br>
 
 <input id="image" placeholder="Image Link">
 <br><br>
 
+<input id="quantity" placeholder="Quantity">
+<br><br>
+
 <select id="status">
 <option>Available</option>
-<option>Sold</option>
+<option>Sold Out</option>
+</select>
+
+<br><br>
+
+<select id="newDrop">
+<option>No</option>
+<option>Yes</option>
+</select>
+
+<br><br>
+
+<select id="bestSeller">
+<option>No</option>
+<option>Yes</option>
 </select>
 
 <br><br>
@@ -53,7 +84,7 @@ if (localStorage.getItem("ownerLoggedIn") !== "true") {
 
 <section>
 
-<h2>Inventory</h2>
+<h2>Your Inventory</h2>
 
 <div id="products"></div>
 
@@ -64,15 +95,6 @@ if (localStorage.getItem("ownerLoggedIn") !== "true") {
 
 
 <script src="admin.js"></script>
-
-
-<script>
-function logout(){
-localStorage.removeItem("ownerLoggedIn");
-window.location.href="login.html";
-}
-</script>
-
 
 </body>
 
