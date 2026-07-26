@@ -3,9 +3,9 @@ let products = JSON.parse(localStorage.getItem("products")) || [];
 
 function addProduct(){
 
-let name = document.getElementById("productName").value;
-let price = document.getElementById("productPrice").value;
-let image = document.getElementById("productImage").value;
+let name = document.getElementById("name").value;
+let price = document.getElementById("price").value;
+let image = document.getElementById("image").value;
 let status = document.getElementById("status").value;
 
 
@@ -19,27 +19,26 @@ status:status
 
 localStorage.setItem("products", JSON.stringify(products));
 
-
 alert("Product Added!");
 
-displayProducts();
+showProducts();
 
 }
 
 
 
-function displayProducts(){
+function showProducts(){
 
 let area = document.getElementById("products");
 
 area.innerHTML = "";
 
 
-products.forEach(product => {
+products.forEach((product,index)=>{
 
 area.innerHTML += `
 
-<div class="product">
+<div class="card">
 
 <img src="${product.image}" width="200">
 
@@ -48,6 +47,10 @@ area.innerHTML += `
 <p>$${product.price}</p>
 
 <p>${product.status}</p>
+
+<button onclick="deleteProduct(${index})">
+Delete
+</button>
 
 </div>
 
@@ -58,4 +61,16 @@ area.innerHTML += `
 }
 
 
-displayProducts();
+
+function deleteProduct(index){
+
+products.splice(index,1);
+
+localStorage.setItem("products", JSON.stringify(products));
+
+showProducts();
+
+}
+
+
+showProducts();
