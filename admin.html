@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Vision Supply Dashboard</title>
+<title>Vision Supply Admin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style.css">
@@ -10,13 +10,6 @@
 </head>
 
 <body>
-
-<script>
-if (localStorage.getItem("ownerLoggedIn") !== "true") {
-  window.location.href = "login.html";
-}
-</script>
-
 
 <header>
 <h1>VISION SUPPLY</h1>
@@ -28,13 +21,13 @@ if (localStorage.getItem("ownerLoggedIn") !== "true") {
 
 <h2>Add Product</h2>
 
-<input id="productName" placeholder="Product name">
+<input id="name" placeholder="Product name">
 <br><br>
 
-<input id="productPrice" placeholder="Price">
+<input id="price" placeholder="Price">
 <br><br>
 
-<input id="productImage" placeholder="Image link">
+<input id="image" placeholder="Image link">
 <br><br>
 
 <select id="status">
@@ -46,13 +39,12 @@ if (localStorage.getItem("ownerLoggedIn") !== "true") {
 
 <button onclick="addProduct()">Add Product</button>
 
-
 </section>
 
 
 <section>
 
-<h2>Your Products</h2>
+<h2>Your Inventory</h2>
 
 <div id="products"></div>
 
