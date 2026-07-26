@@ -2,14 +2,23 @@
 <html>
 
 <head>
-<title>Vision Supply Admin</title>
+<title>Vision Supply Dashboard</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
+
+<script>
+if (localStorage.getItem("ownerLoggedIn") !== "true") {
+  window.location.href = "login.html";
+}
+</script>
+
 
 <header>
 <h1>VISION SUPPLY</h1>
@@ -21,13 +30,13 @@
 
 <h2>Add Product</h2>
 
-<input id="name" placeholder="Product name">
+<input id="name" placeholder="Product Name">
 <br><br>
 
 <input id="price" placeholder="Price">
 <br><br>
 
-<input id="image" placeholder="Image link">
+<input id="image" placeholder="Image Link">
 <br><br>
 
 <select id="status">
@@ -44,14 +53,26 @@
 
 <section>
 
-<h2>Your Inventory</h2>
+<h2>Inventory</h2>
 
 <div id="products"></div>
 
 </section>
 
 
+<button onclick="logout()">Logout</button>
+
+
 <script src="admin.js"></script>
+
+
+<script>
+function logout(){
+localStorage.removeItem("ownerLoggedIn");
+window.location.href="login.html";
+}
+</script>
+
 
 </body>
 
