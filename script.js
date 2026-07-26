@@ -20,9 +20,17 @@ area.innerHTML += `
 
 <h3>${product.name}</h3>
 
+<p>${product.brand}</p>
+
 <p>$${product.price}</p>
 
-<p>${product.status}</p>
+<p>Size: ${product.size}</p>
+
+<p>${product.description}</p>
+
+<p>Notes: ${product.notes}</p>
+
+<p>Status: ${product.status}</p>
 
 </div>
 
