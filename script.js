@@ -29,7 +29,9 @@ area.innerHTML += `
 <p>${product.description}</p>
 
 <p>Notes: ${product.notes}</p>
+<p>${product.newDrop === "Yes" ? "🔥 NEW DROP" : ""}</p>
 
+<p>${product.bestSeller === "Yes" ? "⭐ BEST SELLER" : ""}</p>
 <p>Status: ${product.status}</p>
 
 </div>
