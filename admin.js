@@ -62,6 +62,10 @@ area.innerHTML += `
 
 <p>${product.description}</p>
 
+<button onclick="editProduct(${index})">
+Edit
+</button>
+
 <button onclick="deleteProduct(${index})">
 Delete
 </button>
