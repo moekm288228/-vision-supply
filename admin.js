@@ -3,21 +3,29 @@ let products = JSON.parse(localStorage.getItem("products")) || [];
 
 function addProduct(){
 
-let name = document.getElementById("name").value;
-let price = document.getElementById("price").value;
-let image = document.getElementById("image").value;
-let status = document.getElementById("status").value;
+let product = {
+
+name: document.getElementById("name").value,
+brand: document.getElementById("brand").value,
+price: document.getElementById("price").value,
+size: document.getElementById("size").value,
+category: document.getElementById("category").value,
+description: document.getElementById("description").value,
+notes: document.getElementById("notes").value,
+image: document.getElementById("image").value,
+quantity: document.getElementById("quantity").value,
+status: document.getElementById("status").value,
+newDrop: document.getElementById("newDrop").value,
+bestSeller: document.getElementById("bestSeller").value
+
+};
 
 
-products.push({
-name:name,
-price:price,
-image:image,
-status:status
-});
+products.push(product);
 
 
 localStorage.setItem("products", JSON.stringify(products));
+
 
 alert("Product Added!");
 
@@ -44,9 +52,15 @@ area.innerHTML += `
 
 <h3>${product.name}</h3>
 
+<p>${product.brand}</p>
+
 <p>$${product.price}</p>
 
+<p>${product.size}</p>
+
 <p>${product.status}</p>
+
+<p>${product.description}</p>
 
 <button onclick="deleteProduct(${index})">
 Delete
@@ -73,4 +87,14 @@ showProducts();
 }
 
 
+function logout(){
+
+localStorage.removeItem("ownerLoggedIn");
+
+window.location.href="login.html";
+
+}
+
+
 showProducts();
+
