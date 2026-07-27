@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
 <title>Vision Supply Admin</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
 
 </head>
 
+
 <body>
+
 
 <script>
 if (localStorage.getItem("ownerLoggedIn") !== "true") {
@@ -20,81 +23,107 @@ if (localStorage.getItem("ownerLoggedIn") !== "true") {
 
 
 <header>
+
 <h1>VISION SUPPLY</h1>
+
 <p>Owner Dashboard</p>
+
 </header>
+
 
 
 <section>
 
-<h2>Add Product</h2>
+
+<h2>Add New Product</h2>
+
+
+<div class="admin-box">
+
 
 <input id="name" placeholder="Product Name">
-<br><br>
 
 <input id="brand" placeholder="Brand">
-<br><br>
 
 <input id="price" placeholder="Price">
-<br><br>
 
-<input id="size" placeholder="Size">
-<br><br>
+<input id="size" placeholder="Size (Example: 100ml)">
 
-<input id="category" placeholder="Category">
-<br><br>
+<input id="category" placeholder="Category (Men/Women)">
+
 
 <textarea id="description" placeholder="Description"></textarea>
-<br><br>
+
 
 <input id="notes" placeholder="Fragrance Notes">
-<br><br>
+
 
 <input id="image" placeholder="Image Link">
-<br><br>
+
 
 <input id="quantity" placeholder="Quantity">
-<br><br>
 
+
+<label>Status</label>
 <select id="status">
 <option>Available</option>
 <option>Sold Out</option>
 </select>
 
-<br><br>
 
+
+<label>New Drop?</label>
 <select id="newDrop">
 <option>No</option>
 <option>Yes</option>
 </select>
 
-<br><br>
 
+
+<label>Best Seller?</label>
 <select id="bestSeller">
 <option>No</option>
 <option>Yes</option>
 </select>
 
-<br><br>
 
-<button onclick="addProduct()">Add Product</button>
+
+<button onclick="addProduct()">
+Add Product
+</button>
+
+
+</div>
+
 
 </section>
+
+
 
 
 <section>
 
+
 <h2>Your Inventory</h2>
 
+
 <div id="products"></div>
+
 
 </section>
 
 
-<button onclick="logout()">Logout</button>
+
+
+<button onclick="logout()">
+Logout
+</button>
+
+
 
 
 <script type="module" src="admin.js"></script>
+
 
 </body>
 
