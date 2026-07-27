@@ -1,12 +1,10 @@
 const OWNER_EMAIL = "moekm69@gmail.com";
 const OWNER_PASSWORD = "moe_km05202008";
 
-
 function login() {
 
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-
+  let email = document.getElementById("email").value.trim();
+  let password = document.getElementById("password").value.trim();
 
   if (email === OWNER_EMAIL && password === OWNER_PASSWORD) {
 
@@ -17,7 +15,7 @@ function login() {
   } else {
 
     document.getElementById("message").innerHTML =
-    "Incorrect login";
+    "❌ Incorrect email or password";
 
   }
 
