@@ -34,58 +34,117 @@ if (localStorage.getItem("ownerLoggedIn") !== "true") {
 
 <section>
 
+<h2>Brand Settings</h2>
 
-<h2>Add New Product</h2>
+<div class="card">
+
+<input id="logo" placeholder="Logo Image Link">
+
+<br><br>
+
+<input id="instagram" placeholder="Instagram Link">
+
+<br><br>
+
+<input id="tiktok" placeholder="TikTok Link">
+
+<br><br>
+
+<button onclick="saveSettings()">
+Save Brand Settings
+</button>
+
+</div>
+
+</section>
 
 
-<div class="admin-box">
+
+
+<section>
+
+<h2>Add Product</h2>
+
+
+<div class="card">
 
 
 <input id="name" placeholder="Product Name">
 
+<br><br>
+
+
 <input id="brand" placeholder="Brand">
+
+<br><br>
+
 
 <input id="price" placeholder="Price">
 
-<input id="size" placeholder="Size (Example: 100ml)">
+<br><br>
 
-<input id="category" placeholder="Category (Men/Women)">
+
+<input id="size" placeholder="Size">
+
+<br><br>
+
+
+<input id="category" placeholder="Category">
+
+<br><br>
 
 
 <textarea id="description" placeholder="Description"></textarea>
 
+<br><br>
+
 
 <input id="notes" placeholder="Fragrance Notes">
+
+<br><br>
 
 
 <input id="image" placeholder="Image Link">
 
+<br><br>
+
 
 <input id="quantity" placeholder="Quantity">
 
+<br><br>
 
-<label>Status</label>
+
 <select id="status">
+
 <option>Available</option>
+
 <option>Sold Out</option>
+
 </select>
 
+<br><br>
 
 
-<label>New Drop?</label>
 <select id="newDrop">
+
 <option>No</option>
+
 <option>Yes</option>
+
 </select>
 
+<br><br>
 
 
-<label>Best Seller?</label>
 <select id="bestSeller">
+
 <option>No</option>
+
 <option>Yes</option>
+
 </select>
 
+<br><br>
 
 
 <button onclick="addProduct()">
@@ -103,12 +162,9 @@ Add Product
 
 <section>
 
-
 <h2>Your Inventory</h2>
 
-
 <div id="products"></div>
-
 
 </section>
 
