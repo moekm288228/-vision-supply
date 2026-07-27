@@ -21,25 +21,34 @@ area.innerHTML += `
 
 <div class="card">
 
-<img src="${product.image}" width="200">
+<img src="${product.image}" class="product-image">
 
 <h3>${product.name}</h3>
 
-<p>${product.brand}</p>
+<h4>${product.brand}</h4>
 
-<p>$${product.price}</p>
+<p class="price">$${product.price}</p>
 
-<p>Size: ${product.size}</p>
+<p><b>Size:</b> ${product.size}</p>
 
 <p>${product.description}</p>
 
-<p>Notes: ${product.notes}</p>
+<p><b>Fragrance Notes:</b><br>
+${product.notes}
+</p>
 
-<p>${product.newDrop === "Yes" ? "🔥 NEW DROP" : ""}</p>
+<p>
+${product.newDrop === "Yes" ? "🔥 NEW DROP" : ""}
+${product.bestSeller === "Yes" ? "⭐ BEST SELLER" : ""}
+</p>
 
-<p>${product.bestSeller === "Yes" ? "⭐ BEST SELLER" : ""}</p>
+<p class="status">
+${product.status === "Available" ? "✅ Available" : "❌ Sold Out"}
+</p>
 
-<p>Status: ${product.status}</p>
+<a href="https://instagram.com/visionsupply.shop">
+<button>Order Now</button>
+</a>
 
 </div>
 
